@@ -1,0 +1,16 @@
+---
+import LandingHeader from "../components/landingHeader.astro"
+import Layout from "../layouts/Layout.astro"
+
+---
+
+<Layout transition:persist>
+    <div>
+        <LandingHeader transition:persist />
+        <section class="pt-20 h-screen w-screen flex justify-center">
+            <div class="flex-col text-center">
+                <h4 class="text-4xl">Contanct</h4>
+            </div>
+        </section>
+    </div>
+</Layout>

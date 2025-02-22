@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LandingHeader from "../components/landingHeader.astro";
+import { ChevronRight, ChevronLeft } from "lucide-astro";
+import ResizableBox from "../components/ResizableBox.astro";
+---
+
+<Layout transition:persist>
+  <div class=" snap-y overflow-auto h-screen space-y-14 scroll-smooth">
+    <LandingHeader transition:persist />
+    <section class=" snap-center">
+      <div class="flex justify-center flex-col items-center space-y-4 h-screen">
+        <h2 class="text-6xl text-white font-semibold">
+          ¡Diseñemos tu página web!
+        </h2>
+        <h4 class="text-white text-lg font-light tracking-widest">
+          Blogs, aplicaciones, tiendas y otros
+        </h4>
+      </div>
+    </section>
+
+    <section
+      class=" flex flex-col space-y-10 justify-center snap-center items-center"
+    >
+      <div class=" flex items-center justify-center">
+        <h4 class="text-3xl">Informarte acerca de la importancia de las webs</h4>
+      </div>
+      <div class="lg:flex-col">
+        <div class="">
+          <!-- Primer div con su propio título y texto -->
+          <ResizableBox
+            server:defer
+            id="box1"
+            title="¿Por qué necesitas una página web?"
+            text="Hoy en día, tener una página web es esencial porque permite a empresas, profesionales y emprendedores tener visibilidad global, generar confianza y facilitar el acceso a información clave sobre sus productos o servicios."
+          />
+  
+          <!-- Segundo div con su propio título y texto -->
+          <ResizableBox
+            server:defer
+            id="box2"
+            title="Ventajas de tener presencia online"
+            text="Tener presencia en línea permite a las empresas ampliar su alcance, interactuar con su audiencia de manera más efectiva, y mejorar la competitividad en un mundo cada vez más digitalizado."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="flex justify-center items-center snap-center h-[50rem]">
+      <!-- Círculo izquierdo -->
+      <div
+        class="bg-black/30 h-10 w-10 rounded-full mx-4 flex items-center justify-center
+               transition-transform duration-300 hover:scale-150 hover:bg-black"
+      >
+        <ChevronLeft class="w-6 h-6 text-white" />
+      </div>
+
+      <!-- Div central -->
+      <div class="bg-black/30 rounded-xl h-full w-[90rem]"></div>
+
+      <!-- Círculo derecho -->
+      <div
+        class="bg-black/30 h-10 w-10 rounded-full mx-4 flex items-center justify-center
+               transition-transform duration-300 hover:scale-150 hover:bg-black"
+      >
+        <ChevronRight class="w-6 h-6 text-white" />
+      </div>
+    </section>
+  </div>
+</Layout>
+

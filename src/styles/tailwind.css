@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@theme {
+  --font-poppins: Poppins, sans-serif;
+  --font-nunito: Nunito, sans-serif;
+  --color-white_primary: #D2D2D2;
+  --color-radial-2: radial-gradient(circle, var(--tw-gradient-stops))
+}
+@layer utilities {
+  /* Oculta la barra de fondo */
+  ::-webkit-scrollbar {
+    width: 8px; /* Ajusta el ancho */
+  }
+
+  /* Color del scroll */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.219);
+    border-radius: 10px;
+  }
+
+  /* Fondo de la barra (línea detrás) */
+  ::-webkit-scrollbar-track {
+    width: 20px;
+    background: transparent; /* Hace que desaparezca */
+  }
+}

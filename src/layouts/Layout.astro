@@ -1,0 +1,48 @@
+---
+import "../styles/tailwind.css";
+import { MessageCircleQuestion } from 'lucide-astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Astro Basics</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="{Astro.props.generator}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <article class="text-white">
+      <div
+        class="-z-[100] h-screen w-full fixed items-center justify-center bg-[radial-gradient(circle_at_center,_#4A4DFA_0%,_#6A93EC_45%,_#A07CF2_60%)] bg-[size:150%] bg-[position:6rem]"
+      >
+      </div>
+      
+      <slot />
+      <nav
+        class="fixed bottom-5 right-5 w-16 h-16 rounded-full bg-black/30 hover:scale-150 transition-transform text-center"
+      >
+        <a
+          href="/contact"
+          data-astro-prefetch
+          class="text-black flex items-center justify-center h-full w-full rounded-full"
+        >
+          <MessageCircleQuestion size="2rem" class="text-white" />
+        </a>
+      </nav>
+    </article>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
