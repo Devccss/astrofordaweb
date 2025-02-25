@@ -9,6 +9,8 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://devccss.github.io',
+  base: '/src',
   prefetch: {
     defaultStrategy: 'viewport'
   },

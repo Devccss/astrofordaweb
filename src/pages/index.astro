@@ -6,9 +6,9 @@ import ResizableBox from "../components/ResizableBox.astro";
 ---
 
 <Layout transition:persist>
-  <div class=" snap-y overflow-auto h-screen space-y-14 scroll-smooth">
+  <div class="snap-y overflow-auto h-screen space-y-14 scroll-smooth">
     <LandingHeader transition:persist />
-    <section class=" snap-center">
+    <section class="snap-center">
       <div class="flex justify-center flex-col items-center space-y-4 h-screen">
         <h2 class="text-6xl text-white font-semibold">
           ¡Diseñemos tu página web!
@@ -20,25 +20,27 @@ import ResizableBox from "../components/ResizableBox.astro";
     </section>
 
     <section
-      class=" flex flex-col space-y-10 justify-center snap-center items-center"
+      class="flex flex-col space-y-10 justify-center snap-center items-center mb-48"
     >
-      <div class=" flex items-center justify-center">
-        <h4 class="text-3xl">Informarte acerca de la importancia de las webs</h4>
+      <div
+        class="flex items-center justify-center space-y-2 bg-gray-950/30 rounded-full p-4"
+      >
+        <h4 class="text-4xl">
+          Informarte acerca de la importancia de las webs
+        </h4>
       </div>
-      <div class="lg:flex-col">
-        <div class="">
+      <div class="">
+        <div class="flex md:flex-row md:space-x-4 flex-col md:text-2xl">
           <!-- Primer div con su propio título y texto -->
           <ResizableBox
-            server:defer
-            id="box1"
+            id="1"
             title="¿Por qué necesitas una página web?"
             text="Hoy en día, tener una página web es esencial porque permite a empresas, profesionales y emprendedores tener visibilidad global, generar confianza y facilitar el acceso a información clave sobre sus productos o servicios."
           />
-  
+
           <!-- Segundo div con su propio título y texto -->
           <ResizableBox
-            server:defer
-            id="box2"
+            id="2"
             title="Ventajas de tener presencia online"
             text="Tener presencia en línea permite a las empresas ampliar su alcance, interactuar con su audiencia de manera más efectiva, y mejorar la competitividad en un mundo cada vez más digitalizado."
           />
@@ -46,7 +48,10 @@ import ResizableBox from "../components/ResizableBox.astro";
       </div>
     </section>
 
-    <section class="flex justify-center items-center snap-center h-[50rem]">
+    <section
+    class="border flex justify-center items-center snap-center h-[50rem] pb-20 w-full max-w-[90rem] mx-auto"
+  >
+    <div class="flex justify-center items-center w-full max-w-[90rem]">
       <!-- Círculo izquierdo -->
       <div
         class="bg-black/30 h-10 w-10 rounded-full mx-4 flex items-center justify-center
@@ -54,10 +59,10 @@ import ResizableBox from "../components/ResizableBox.astro";
       >
         <ChevronLeft class="w-6 h-6 text-white" />
       </div>
-
+  
       <!-- Div central -->
-      <div class="bg-black/30 rounded-xl h-full w-[90rem]"></div>
-
+      <div class="bg-black/30 rounded-xl h-[50rem] w-full max-w-[70rem]"></div>
+  
       <!-- Círculo derecho -->
       <div
         class="bg-black/30 h-10 w-10 rounded-full mx-4 flex items-center justify-center
@@ -65,7 +70,9 @@ import ResizableBox from "../components/ResizableBox.astro";
       >
         <ChevronRight class="w-6 h-6 text-white" />
       </div>
-    </section>
+    </div>
+  </section>
+  
+  
   </div>
 </Layout>
-
