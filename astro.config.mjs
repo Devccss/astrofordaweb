@@ -1,17 +1,18 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
-
-
-import node from '@astrojs/node';
-
-
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/',
+  base: "/",
+  site: "https://fordawebblog.com",
+  integrations: [mdx(), sitemap()],
+  output: "server",
   prefetch: {
-    defaultStrategy: 'viewport'
+    defaultStrategy: "viewport",
   },
 
   vite: {
@@ -21,6 +22,9 @@ export default defineConfig({
   integrations: [],
 
   adapter: node({
-    mode: 'standalone'
-  })
+    mode: "standalone",
+  }),
+  server: {
+    host: "0.0.0.0",
+  },
 });
