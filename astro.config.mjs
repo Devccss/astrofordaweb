@@ -5,16 +5,13 @@ import sitemap from "@astrojs/sitemap";
 
 import node from "@astrojs/node";
 
+
 // https://astro.build/config
 export default defineConfig({
   base: "/",
   site: "https://fordawebblog.com",
   integrations: [mdx(), sitemap()],
   output: "server",
-  prefetch: {
-    defaultStrategy: "viewport",
-  },
-
   vite: {
     plugins: [tailwindcss()],
   },

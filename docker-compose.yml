@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  astro-app:
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - /mnt/astro_data:/app
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  astro_data:
+    driver: local

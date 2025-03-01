@@ -1,15 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/indexLayout.astro";
 import LandingHeader from "../components/landingHeader.astro";
 import { ChevronRight, ChevronLeft } from "lucide-astro";
 import ResizableBox from "../components/ResizableBox.astro";
+
 ---
 
-<Layout transition:persist>
-  <div class="snap-y overflow-auto h-screen space-y-14 scroll-smooth">
-    <LandingHeader transition:persist />
+<Layout title="4DAWEB" transition:persist>
+  <LandingHeader />
+  <div class="snap-y overflow-auto h-screen w-screen space-y-14 scroll-smooth">
+    
     <section class="snap-center">
-      <div class="flex justify-center flex-col items-center space-y-4 h-screen">
+      <div id="description" class="flex justify-center flex-col items-center space-y-4 h-screen">
         <h2 class="text-6xl text-white font-semibold">
           ¡Diseñemos tu página web!
         </h2>
@@ -49,9 +51,9 @@ import ResizableBox from "../components/ResizableBox.astro";
     </section>
 
     <section
-    class="border flex justify-center items-center snap-center h-[50rem] pb-20 w-full max-w-[90rem] mx-auto"
+    class="border flex justify-center items-center snap-center h-full mb-20 w-full max-w-[90rem] mx-auto"
   >
-    <div class="flex justify-center items-center w-full max-w-[90rem]">
+    <div class="flex justify-center items-center h-full w-full max-w-[90rem]">
       <!-- Círculo izquierdo -->
       <div
         class="bg-black/30 h-10 w-10 rounded-full mx-4 flex items-center justify-center
@@ -76,3 +78,27 @@ import ResizableBox from "../components/ResizableBox.astro";
   
   </div>
 </Layout>
+<style>
+  #description {
+    animation: scrolltext;
+    animation-timeline: view(-200% 70%);
+  }
+  @keyframes scrolltext {
+    
+    0% {
+      transform: translate(-30);
+    }
+    10% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(90%);
+    }
+  }
+  
+</style>
