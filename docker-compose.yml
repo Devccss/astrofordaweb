@@ -6,7 +6,7 @@ services:
       - "3000:3000"
     restart: always
     volumes:
-      - /mnt/astro_data:/app
+      - /mnt/astro_data:/app/public
     environment:
       - NODE_ENV=production
 
